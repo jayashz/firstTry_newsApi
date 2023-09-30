@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './Newslister.css';
 import ReactCardFlip from 'react-card-flip';
 
 const NewsLister = (props) => {
