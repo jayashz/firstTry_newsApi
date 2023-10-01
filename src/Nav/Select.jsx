@@ -4,19 +4,18 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 
 export default function BasicSelect(props) {
   const [type, setType] = useState(10);
 
   const handleChange = (event) => {
     setType(event.target.value);
+
 };
-
-useState(()=>{
-    props.onSearchChange(type);
-
-  },[type]);
+  //Implicit props call=>
+  props.onSearchChange(type);
+  
 
   return (
     <Box sx={{ minWidth: 200 }}>

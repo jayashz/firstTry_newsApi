@@ -3,7 +3,8 @@ import ReactCardFlip from 'react-card-flip';
 
 const NewsLister = (props) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const flipCard = () => {
+  const flipCard = (event) => {
+    event.preventDefault();
     if(isFlipped){
       setIsFlipped(false);
     }

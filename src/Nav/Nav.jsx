@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Select from './Select';
 
-const Nav = () => {
+const Nav = (props) => {
 
-   const [search,setSearch]= useState('country');
+   
    const changeHandler=(data)=>{
-    console.log(data);
+    props.onSearch(data);
     };
 
-    useEffect(()=>{
-        if(search==='country'){
-            
-        }
-    },[search]);
 
   return (
     <div className='px-8 bg-seafoam flex items-center justify-center ' >
